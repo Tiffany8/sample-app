@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$transparent-gray: rgba(0, 0, 0, 0.49);
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -11,7 +12,22 @@ $gray-medium-light: #eaeaea;
   box-sizing: border-box;
 }
 
+/* font */
+@import url('http://fonts.googleapis.com/css?family=Cabin+Sketch');
+
+
 /* universal */
+
+div.background {
+  background-image: url(image-path("blurred_chalk_lg.png"));
+  background-size: cover;
+  font-family: 'Cabin Sketch';
+  color: cornsilk;
+}
+
+div.jumbotron {
+  background-color: $transparent-gray;
+}
 
 body {
   padding-top: 60px;
@@ -52,7 +68,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: cornsilk;
 }
 
 p {
